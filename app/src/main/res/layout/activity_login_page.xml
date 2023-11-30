@@ -47,9 +47,7 @@
             android:paddingStart="7dp"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginTop="15dp"
-            tools:layout_editor_absoluteX="229dp"
-            tools:layout_editor_absoluteY="39dp" />
+            android:layout_marginTop="15dp"/>
 
     </LinearLayout>
 
@@ -77,6 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="65dp"
             android:fontFamily="@font/poppins_light"
+            android:layout_marginStart="5dp"
             android:text="CUP"
             android:textColor="@color/dark"
             android:textSize="48sp" />
