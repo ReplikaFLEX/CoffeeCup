@@ -13,7 +13,7 @@
         android:theme="@style/Theme.CoffeeCup"
         tools:targetApi="31">
         <activity
-            android:name=".shop_page"
+            android:name=".logo_page"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -22,7 +22,7 @@
             android:name=".login_page"
             android:exported="false" />
         <activity
-            android:name=".logo_page"
+            android:name=".shop_page"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

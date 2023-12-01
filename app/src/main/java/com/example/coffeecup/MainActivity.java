@@ -1,6 +1,8 @@
 package com.example.coffeecup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.View;
 import android.os.Bundle;
 
