@@ -3,13 +3,15 @@ package com.example.coffeecup;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
-
 import java.util.ArrayList;
-import java.util.List;
 
-public class shop_page extends AppCompatActivity {
+public class shop_page extends AppCompatActivity{
+
+    ArrayList<CoffeeModelClass> coffeeModelClasses = new ArrayList<>();
+
+    int[] coffeeImages = {R.drawable.espresso, R.drawable.lungo, R.drawable.americano, R.drawable.ristretto,
+                R.drawable.cappuccino, R.drawable.latte, R.drawable.flatwhite, R.drawable.cortado, R.drawable.mochacino};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,18 +20,19 @@ public class shop_page extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.list);
 
-        List<Item> items = new ArrayList<Item>();
-        items.add(new Item("Espresso",R.drawable.espresso));
-        items.add(new Item("Lungo",R.drawable.lungo));
-        items.add(new Item("Americano",R.drawable.americano));
-        items.add(new Item("Ristretto",R.drawable.ristretto));
-        items.add(new Item("Cappuccino",R.drawable.cappuccino));
-        items.add(new Item("Latte",R.drawable.latte));
-        items.add(new Item("Flat White",R.drawable.flatwhite));
-        items.add(new Item("Cortado",R.drawable.cortado));
-        items.add(new Item("Mochacino",R.drawable.mochacino));
+        setUpCoffeeModelClasses();
 
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, coffeeModelClasses);
+        recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new MyAdapter(getApplicationContext(), items));
+    }
+
+    private void setUpCoffeeModelClasses()
+    {
+        String[] coffeeNames = getResources().getStringArray(R.array.coffeeVariants);
+
+        for (int i = 0; i<coffeeNames.length; i++){
+            coffeeModelClasses.add(new CoffeeModelClass(coffeeNames[i], coffeeImages[i]));
+        }
     }
 }

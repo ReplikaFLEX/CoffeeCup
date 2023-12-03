@@ -15,6 +15,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:id="@+id/shape"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/shape"
+        android:layout_marginStart="9.3dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/picture"
+        app:layout_constraintTop_toTopOf="@+id/picture" />
+
     <Button
         android:id="@+id/deploy"
         android:layout_width="150dp"
@@ -25,23 +35,24 @@
         android:backgroundTint="@color/light"
         android:fontFamily="@font/poppins"
         android:text="Check"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/picture"
         app:layout_constraintStart_toStartOf="@+id/picture"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageact"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageexp"
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:scaleType="centerCrop"
         android:layout_marginStart="12dp"
         android:src="@drawable/mochacino"
-        android:background="@drawable/shape"
+        app:shapeAppearanceOverlay="@style/roundimageview"
         app:layout_constraintBottom_toBottomOf="@+id/picture"
         app:layout_constraintStart_toStartOf="@+id/picture"
-        app:layout_constraintTop_toTopOf="@+id/picture" />
+        app:layout_constraintTop_toTopOf="@+id/picture"/>
 
     <TextView
         android:id="@+id/namecoffee"

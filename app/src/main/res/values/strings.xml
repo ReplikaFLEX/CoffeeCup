@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">CoffeeCup</string>
+    
+    <string-array name="coffeeVariants">
+        <item>Espresso</item>
+        <item>Lungo</item>
+        <item>Americano</item>
+        <item>Ristretto</item>
+        <item>Cappuccino</item>
+        <item>Latte</item>
+        <item>Flat White</item>
+        <item>Cortado</item>
+        <item>Mochaciho</item>
+    </string-array>
 </resources>

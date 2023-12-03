@@ -3,4 +3,11 @@
     <style name="Base.Theme.CoffeeCup" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">#000000</item>
     </style>
+    
+    <style name="roundimageview" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">17dp</item>
+        <item name="color">@color/light</item>
+    </style>
+
 </resources>
