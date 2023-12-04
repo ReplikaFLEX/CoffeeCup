@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginBottom="15dp"
+    android:layout_marginBottom="5dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -25,23 +25,6 @@
         app:layout_constraintStart_toStartOf="@+id/picture"
         app:layout_constraintTop_toTopOf="@+id/picture" />
 
-    <Button
-        android:id="@+id/deploy"
-        android:layout_width="150dp"
-        android:layout_height="55dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="@color/light"
-        android:fontFamily="@font/poppins"
-        android:text="Check"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/picture"
-        app:layout_constraintStart_toStartOf="@+id/picture"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageexp"
         android:layout_width="125dp"
@@ -59,10 +42,10 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/poppins"
-        android:text="Example"
+        android:text="Mochacino"
         android:textAlignment="center"
         android:textColor="@color/dark"
         android:textSize="30dp"

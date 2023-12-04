@@ -3,10 +3,11 @@ package com.example.coffeecup;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import android.content.Intent;
 import android.os.Bundle;
 import java.util.ArrayList;
 
-public class shop_page extends AppCompatActivity{
+public class shop_page extends AppCompatActivity implements RecyclerViewInterface{
 
     ArrayList<CoffeeModelClass> coffeeModelClasses = new ArrayList<>();
 
@@ -22,7 +23,7 @@ public class shop_page extends AppCompatActivity{
 
         setUpCoffeeModelClasses();
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, coffeeModelClasses);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, coffeeModelClasses, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -30,9 +31,21 @@ public class shop_page extends AppCompatActivity{
     private void setUpCoffeeModelClasses()
     {
         String[] coffeeNames = getResources().getStringArray(R.array.coffeeVariants);
+        String[] coffeeDescs = getResources().getStringArray(R.array.coffeeDescriptions);
 
         for (int i = 0; i<coffeeNames.length; i++){
-            coffeeModelClasses.add(new CoffeeModelClass(coffeeNames[i], coffeeImages[i]));
+            coffeeModelClasses.add(new CoffeeModelClass(coffeeNames[i], coffeeDescs[i], coffeeImages[i]));
         }
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent intent = new Intent(shop_page.this, information_page.class);
+
+        intent.putExtra("NAME", coffeeModelClasses.get(position).getCoffeeName());
+        intent.putExtra("DESCRIPTION", coffeeModelClasses.get(position).getDescription());
+        intent.putExtra("IMAGE", coffeeModelClasses.get(position).getImage());
+
+        startActivity(intent);
     }
 }

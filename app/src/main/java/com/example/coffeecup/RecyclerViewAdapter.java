@@ -12,12 +12,15 @@ import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
+    private final RecyclerViewInterface recyclerViewInterface;
+
     Context context;
     ArrayList<CoffeeModelClass> coffeeModelClasses;
 
-    public RecyclerViewAdapter(Context context, ArrayList<CoffeeModelClass> coffeeModelClasses){
+    public RecyclerViewAdapter(Context context, ArrayList<CoffeeModelClass> coffeeModelClasses, RecyclerViewInterface recyclerViewInterface){
         this.context = context;
         this.coffeeModelClasses = coffeeModelClasses;
+        this.recyclerViewInterface = recyclerViewInterface;
     }
 
     @NonNull
@@ -39,7 +42,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return coffeeModelClasses.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder
+    public class MyViewHolder extends RecyclerView.ViewHolder
     {
         ImageView imageView;
         TextView textViewName;
@@ -49,6 +52,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             imageView = itemView.findViewById(R.id.imageexp);
             textViewName = itemView.findViewById(R.id.namecoffee);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(recyclerViewInterface != null)
+                    {
+                        int pos = getAdapterPosition();
+
+                        if(pos != RecyclerView.NO_POSITION)
+                        {
+                            recyclerViewInterface.onItemClick(pos);
+                        }
+                    }
+                }
+            });
         }
     }
 }

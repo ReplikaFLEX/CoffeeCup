@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">CoffeeCup</string>
-    
+
     <string-array name="coffeeVariants">
         <item>Espresso</item>
         <item>Lungo</item>
@@ -10,6 +10,18 @@
         <item>Latte</item>
         <item>Flat White</item>
         <item>Cortado</item>
-        <item>Mochaciho</item>
+        <item>Mochacino</item>
+    </string-array>
+
+    <string-array name="coffeeDescriptions">
+        <item>Almost all coffee drinks are prepared on the basis of espresso: with the addition of water and milk in different proportions. What is the basis of espresso itself? Only coffee and 40 ml of water.</item>
+        <item>Lungo means “long” in Italian. The drink is prepared using the same principle and with the same amount of coffee as espresso. But with a larger volume of water - 70 ml, and longer. Water spill time is 1 minute.</item>
+        <item>The basis of Americano is ready-made espresso, which is diluted with boiling water. Moreover, the volume of hot water can be different: the larger it is, the less strong the drink turns out. The taste of Americano is milder compared to Lungo.</item>
+        <item>Ristretto is one of the favorite drinks of Italians. It is never drunk with added sugar or with dessert. Otherwise, you will not be able to experience the full depth of taste and aroma of coffee.</item>
+        <item>The delicate texture of airy milk foam combined with the bright aroma of coffee is the reason for the popularity of cappuccino! To prepare the drink, espresso, heated and frothed milk are used in equal proportions.</item>
+        <item>Latte is more of a milk-coffee drink. After all, it is based on one part espresso, two or even three parts milk and milk foam. Airy and at the same time strong foam allows you to create patterns on the surface of the drink.</item>
+        <item>This drink can be recognized by its “flat” foam, a thin layer covering the heated milk and aromatic espresso. Flat White will appeal to those who prefer stronger coffee. To prepare the drink, use a double shot of espresso.</item>
+        <item>Coffee with milk according to this recipe is preferred by residents of Spain, Portugal and Latin America. How to cook cortado? Add the same amount of heated milk to a shot of espresso. In this case, a natural dense foam should form on the surface.</item>
+        <item>The birthplace of moccacino, or mocha, is America. Although the American drink is very similar to the Italian latte. Mocha also contains espresso, hot milk and... chocolate. Coffee with chocolate is decorated with lush milk foam and a cloud of whipped cream.</item>
     </string-array>
 </resources>
