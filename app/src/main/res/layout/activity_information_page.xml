@@ -26,17 +26,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view3"
+        android:id="@+id/exist"
         android:layout_width="72dp"
         android:layout_height="72dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/cross2"
         android:backgroundTint="@color/light"
-        android:onClick="closeActivity"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ExtraText" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -101,15 +99,15 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
-        android:id="@+id/moneycounter"
+        android:id="@+id/pricecounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="7dp"
         android:layout_marginStart="30dp"
         android:fontFamily="@font/poppins"
-        android:text="Price: 250$"
+        android:text="Price: 50$"
         android:textColor="@color/white"
-        android:textSize="32dp"
+        android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/view4"
         app:layout_constraintStart_toStartOf="parent" />
 

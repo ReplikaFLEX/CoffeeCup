@@ -76,7 +76,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
-        android:id="@+id/view3"
+        android:id="@+id/close"
         android:layout_width="72dp"
         android:layout_height="72dp"
         android:layout_marginStart="25dp"
@@ -137,7 +137,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/viewarrow"
+        android:id="@+id/finishshopping"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="@color/dark"
@@ -153,8 +153,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="12dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="9999$"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="0$"
         android:textColor="@color/green"
         android:textSize="32dp"
         app:layout_constraintBottom_toTopOf="@+id/view4"
